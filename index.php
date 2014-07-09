@@ -10,7 +10,7 @@ if (isset($_GET["action"])&& $_GET["action"] == "login") {
         header("location: aangemeld.php");
         exit(0);
     } else {
-        header("location: aanmelden.php");
+        header("location: index.php");
         exit(0);
     }
 } else {
