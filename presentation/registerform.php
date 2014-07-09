@@ -3,7 +3,7 @@
     <head><title>Webshop</title></head>
     <body>
         <h1>Registreren</h1>
-        <form action="index.php?action=register" method="post">
+        <form action="index.php?action=geregistreerd" method="post">
             <label>Kies een gebruikersnaam: </label>
             <input type="text" name="txtGebruikersnaam" placeholder="gebruikersnaam"><br>
             <label>Kies een wachtwoord: </label>
