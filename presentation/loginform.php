@@ -3,7 +3,7 @@
 	<head><title>Webshop</title></head>
 	<body>
 		<h1>Inloggen</h1>
-		<form action="test_login.php?action=login" method="post">
+		<form action="inloggen.php?action=login" method="post">
 			<table>
 				<tbody>
 					<tr>
