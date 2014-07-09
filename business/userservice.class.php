@@ -13,4 +13,9 @@ class UserService {
         }
     }
 
+    public function voegNieuweGebruikerToe($gebruikersnaam, $wachtwoord) {
+        $userDAO = new userDAO();
+        $userDAO->create($gebruikersnaam, $wachtwoord);
+    }
+
 }
