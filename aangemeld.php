@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-require_once("business/userservice.class.php");
 
 if (!isset($_SESSION["aangemeld"])) {
     header("location: index.php");
