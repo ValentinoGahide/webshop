@@ -6,7 +6,7 @@
     </head>
     <body>
         <header>
-            <form class="registreren" action="index.php?action=register" method="post">
+            <form class="registreren" action="registreren.php" method="post">
                 <input type="submit" value="Registreren">	
             </form>
             <form class="aanmelden" action="index.php?action=login" method="post">

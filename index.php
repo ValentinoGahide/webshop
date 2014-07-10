@@ -3,7 +3,7 @@
 session_start();
 require_once("business/userservice.class.php");
 
-if (isset($_GET["action"]) === "login") {
+if (isset($_GET["action"]) == "login") {
     $toegelaten = UserService::controleerGebruiker($_POST["txtGebruikersnaam"], $_POST["txtWachtwoord"]);
     if ($toegelaten) {
         $_SESSION["aangemeld"] = true;
