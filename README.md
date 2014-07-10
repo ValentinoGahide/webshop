@@ -3,4 +3,5 @@ webshop
 
 alles voor de webshop
 
-toegevoegd: inloggen en registreren
+toegevoegd: inloggen  
+onder constructie: registreren

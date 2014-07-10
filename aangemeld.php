@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION["aangemeld"])) {
-    header("location: aangemeld.php");
+    header("location: index.php");
     exit(0);
 }
-include("presentation/ingelogd.php");
+include("presentation/aangemeldeinformatie.php");

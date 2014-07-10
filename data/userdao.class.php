@@ -24,17 +24,4 @@ class UserDAO {
         }
     }
 
-    public function create($gebruikersnaam, $wachtwoord) {
-        $bestaandeGebruiker = $this->getByGebruikersnaam($gebruikersnaam);
-        if (isset($bestaandeGebruiker))
-            throw new GebruikerBestaatException();
-        $sql = "insert into gebruikers (gebruikersnaam, wachtwoord) values ('" . $gebruikersnaam . "', " . $wachtwoord . ")";
-        $dbh = new PDO(DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
-        $dbh->exec($sql);
-        $id = $dbh->lastInsertId();
-        $dbh = null;
-        $user = User::create($id, $gebruikersnaam, $wachtwoord);
-        return $user;
-    }
-
 }

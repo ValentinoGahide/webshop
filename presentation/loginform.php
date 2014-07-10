@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <html>
-    <head><title>Webshop</title></head>
+    <head>
+        <title>Webshop</title>
+        <link rel="stylesheet" href="css/webshop.css">
+    </head>
     <body>
-        <h1>Aanmelden</h1>
-        <form action="index.php?action=login" method="post">
-            <input type="text" name="txtGebruikersnaam" placeholder="gebruikersnaam">
-            <input type="password" name="txtWachtwoord" placeholder="wachtwoord">
-            <input type="submit" value="Aanmelden">
-        </form><br>
-        <h1>Registreren</h1>
-        Indien u geen account hebt kan u <a href="registreren.php">hier</a> registreren
+        <header>
+            <form class="aanmelden" action="index.php?action=login" method="post">
+                <input type="text" name="txtGebruikersnaam" placeholder="gebruikersnaam">
+                <input type="password" name="txtWachtwoord" placeholder="wachtwoord">
+                <input type="submit" value="Aanmelden">	
+            </form>
+        </header>
     </body>
 </html>
