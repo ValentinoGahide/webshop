@@ -16,3 +16,9 @@ if (isset($_GET["action"]) === "login") {
 } else {
     include("presentation/loginform.php");
 }
+
+if (isset($_GET["action"]) === "register") {
+    $_SESSION["registreren"] = true;
+    header("location: registreren.php");
+    exit(0);
+}

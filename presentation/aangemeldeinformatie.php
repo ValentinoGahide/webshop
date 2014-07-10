@@ -6,7 +6,7 @@
     </head>
     <body>
         <header>           
-            <em>Succesvol aangemeld</em>
+            <em>Welkom</em>
         </header>
     </body>
 </html>
