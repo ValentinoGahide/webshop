@@ -4,11 +4,21 @@
 
 
 /*header*/
-.aanmelden {
+.registreren {
     float:right;
 }
+.aanmelden {
+    float: right;
+}
 .aanmelden input {
-    float:left;
+    float: left;
+}
+em {
+    float: right;
+    margin-right: 2em;
+}
+.error {
+    color: red;
 }
 
 /*inhoud*/
