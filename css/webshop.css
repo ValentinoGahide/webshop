@@ -4,13 +4,13 @@
 
 
 /*header*/
-.registreren {
+#registreren {
     float:right;
 }
-.aanmelden {
+#aanmelden {
     float: right;
 }
-.aanmelden input {
+#aanmelden input {
     float: left;
 }
 em {

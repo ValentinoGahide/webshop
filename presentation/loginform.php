@@ -6,10 +6,10 @@
     </head>
     <body>
         <header>
-            <form class="registreren" action="registreren.php" method="post">
+            <form id="registreren" action="registreren.php" method="post">
                 <input type="submit" value="Registreren">	
             </form>
-            <form class="aanmelden" action="index.php?action=login" method="post">
+            <form id="aanmelden" action="index.php?action=login" method="post">
                 <input type="text" name="txtGebruikersnaam" placeholder="gebruikersnaam">
                 <input type="password" name="txtWachtwoord" placeholder="wachtwoord">
                 <input type="submit" value="Aanmelden">	
