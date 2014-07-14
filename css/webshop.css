@@ -1,24 +1,29 @@
 /*WEBSHOP CSS*/
 
-/*algemeen*/
+/**algemeen**/
 
-
-/*header*/
-#registreren {
-    float:right;
-}
-#aanmelden {
-    float: right;
-}
-#aanmelden input {
-    float: left;
-}
 em {
     float: right;
     margin-right: 2em;
 }
-.error {
-    color: red;
+
+/**loginform**/
+
+#registreren {
+    float: right;
+}
+#aanmelden {
+    float: right;
+}
+.login-form {
+    float: right;
+}
+.login-form form input {
+    float: left;
 }
 
-/*inhoud*/
+/**registrationform**/
+
+
+/**grid**/
+
