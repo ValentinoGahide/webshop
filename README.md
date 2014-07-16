@@ -3,5 +3,5 @@ webshop
 
 alles voor de webshop
 
-toegevoegd: inloggen  
-onder constructie: registreren
+php grotendeels ok
+css in de maak, home en registreren ok
