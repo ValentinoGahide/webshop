@@ -24,7 +24,7 @@ class PostcodeDAO {
         $sql = "select id, postnr, gemeente, kostprijs, thuis_lev_ok
                   from postcodes"; 
         $resultSet = $core->dbh->query($sql);
-        foreach ($resultSet as $rij) {
+        foreach ((array)$resultSet as $rij) {
             $lijst [] = array ('gemeente' => $rij["gemeente"], 'id'=> $rij ["id"], 'postnr' => $rij ["postnr"]);
         }
         sort ($lijst);

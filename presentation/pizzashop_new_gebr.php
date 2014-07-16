@@ -56,11 +56,11 @@
                   <br>
                   <tr>
                       <td>Gebruikersnaam</td>
-                      <td><input type="text" name="usernaam" required></td>
+                      <td><input type="text" name="usernm" required></td>
                   </tr>
                   <tr>
                       <td>Wachtwoord</td>
-                      <td><input type="password" name="wachtwoord" required></td>
+                      <td><input type="password" name="pasw" required></td>
                   </tr>
                   <tr>
                       <td></td>
@@ -78,7 +78,7 @@
   <!--einde inhoud--> 
 </div>
 <footer>
-  <div class="container"> Copyright Valentino Gahide </div>
+  <div class="container"> Deze site is gemaakt als eindtest PHP door Piet Arickx </div>
 </footer>
 </body>
 </html>

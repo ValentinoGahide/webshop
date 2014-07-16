@@ -62,7 +62,7 @@ if (isset($_GET["action"])) {
         else
           {$error = "Gelieve u eerst aan te melden vooraleer de bestelling te registreren";
            // eerst aanmelden, + info over gekozen productid (dit onthouden voor later)
-           header("location: ctrl_aanmelding.php?error=".$error);
+           header("location: ctrl_pizzashop_home.php?error=".$error);
            exit(0);
           } 
         //
@@ -303,7 +303,7 @@ if (isset($_GET["action"])) {
         } else {
             $error = "Gelieve u eerst aan te melden";
             // eerst aanmelden, + info over gekozen productid (dit onthouden voor later)
-            header("location: ctrl_aanmelding.php?error=" . $error);
+            header("location: ctrl_pizzashop_home.php?error=" . $error);
             exit(0);
         }
         //
@@ -331,7 +331,7 @@ if (isset($_GET["action"])) {
         } else {
             $error = "Gelieve u eerst aan te melden";
             // eerst aanmelden, + info over gekozen productid (dit onthouden voor later)
-            header("location: ctrl_aanmelding.php?error=" . $error);
+            header("location: ctrl_pizzashope_home.php?error=" . $error);
             exit(0);
         }
         //

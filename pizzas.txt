@@ -1,0 +1,46 @@
+/Pizza Margherita 
+mozzarella , tomaten 11,00 €
+/Pizza Napolitana 
+mozzarella , tomaten , ansjovis , olijven 11,00 €
+Pizza Sicilianna 
+mozzarella , tomaten , ansjovis , kappertjes 11,00 €
+Pizza Veneziana 
+mozzarella , tomaten , uien , champignons 11,00 €
+Pizza Prosciutto 
+mozzarella , tomaten , ham 11,00 €
+Pizza Salami 
+mozzarella , tomaten , salami 11,00 €
+Pizza Arrabiata 
+mozzarella , tomaten , salami pikant 12,00 €
+Pizza Tono 
+mozzarella , tomaten , tonijn 10,00 €
+Pizza Funghi 
+mozzarella , tomaten , champignons 14,00 €
+Pizza Capricciosa 
+mozzarella , tomaten , ansjovis , parmaham , champignons 12,50 €
+Pizza Sophia Loren 
+mozzarella , tomaten , ham , champignons , ei 14,00 €
+Pizza Verde Campagna 
+mozzarella , tomaten , artisjokken , look , ansjovis , parmaham 12,50 €
+Pizza Quatro Stagioni 
+mozzarella , tomaten , salami , champignons , artisjokken , olijven 12,50 €
+Pizza Primavera 
+vegetarisch 11,50 €
+Pizza Pepperoni 
+mozzarella , tomaten , paprika's 13,50 €
+Pizza Pepperoni Salami 
+mozzarella, tomaten, paprika's, salami 13,50 €
+Pizza Hawai 
+mozzarella , tomaten , ham , ananas 13,00 €
+Pizza Calzone 
+mozzarella , tomaten , champignons , ham 14,50 €
+Pizza Frutti Di Mare 
+mozzarella , tomaten , zeevruchten 12,00 €
+Pizza Rimini 
+mozzarella , tomaten , ham , champignons 12,50 €
+Pizza Quattro Formaggi 
+mozzarella , tomaten , 4 kazen 15,00 €
+Pizza Carpaccio 
+mozzarella , tomaten , rundvlees , parmesan 11,50 €
+Pizza Bolognaise 14,00 €
+mozzarella, tomaten, paprika, uien, gehakt

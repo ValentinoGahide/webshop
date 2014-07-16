@@ -10,7 +10,7 @@ class Gastenboek {
 
     private function __construct($id, $usernaam, $boodschap, $dt_aangemaakt) {
         $this->id = $id;
-        $this->usernm = $usernaam;
+        $this->usernaamm = $usernaam;
         $this->boodschap = $boodschap;
         $this->dt_aangemaakt = $dt_aangemaakt;
     }
@@ -40,7 +40,7 @@ class Gastenboek {
     }
 
     public function setUsernm($usernaam) {
-        $this->usernm = $usernaam;
+        $this->usernaamm = $usernaam;
     }
 
     public function setBoodschap($boodschap) {

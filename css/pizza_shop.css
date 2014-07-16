@@ -9,96 +9,63 @@
 /* 
 CSS voor Pizzashop
 */
-/******* ALGEMEEN ********/
-body, div, article, section {
-    margin: 0;
-    padding: 0;
+/*algemeen*/
+header, footer {
+    background: black;
+    color: white;
 }
-.wikkel {
-    margin: 0;
-}
-padding {
-    margin: 0 0;
-}
-.container {
-    margin: 0 1em;
-}
-body {
-    font: 16px "Lucida Grande", Sans-Serif; /* 1em = 16px */
-    color: #222222;
-}
-a {
+a:hover{
     text-decoration: none;
-    color: inherit;
 }
-h1 {
-    font-size: 1.4em;
+/*navbar*/
+.navbar-brand {                 /* textlogo mooi plaatsen */
+    padding-top: 10px; 
 }
-
-
-/********* DESKTOP LAY-OUT***********/
-body {
-    /*background-color: #ff0000;*/
+.row {
+    margin: 2em -1em;
 }
-.container {
-    width: 70%;
-    max-width: 1100px;
-    margin: auto auto;
-    position:relative;
+/*aside*/
+.form {
+    margin-bottom: 1em;
+    padding: 2em;
+    background: #990000;
+    color: white;
+    border: 2px solid white;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
 }
-/* titel en hoofdmenu balk */
-header {
-    background-color: #373737;
-    margin: 2em 0;
+.form_otherpage {
+    margin-bottom: 2em;
+    padding: 0.5em;
+    background: #990000;
+    color: white;
+    border: 2px solid white;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
 }
-#inlogok {
-    color:white;
-    float:right;
-    margin: 0.8em 0;
-    padding: 0;
+#registerbtn {
+    margin-top: 1em;
+    margin-right: 0.1em;
 }
-header h1 {
-    display:inline-block;
+strong {
     font-size: 1.5em;
-    color: white;
-    float:left;
-    margin:1em 0.6em;
 }
-#hoofdmenu {
-    width:100%;
-    color: white;
-    display: inline-block;
-    list-style:none;
-    float:right;
+#logo {
+    width: 95%;
+    margin-bottom: 1em;
 }
-#hoofdmenu li {
-    font-size: 1.1em;
-    float:left;
-    padding: 0 1em;
+/*section*/
+/*carousel*/
+.carousel {
+    border: 3px solid black;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.4em;
 }
-#hoofdmenu li:hover {
-    color: red;
-    background-color: inherit;
+/*uitleg*/
+#uitleg {
+    margin-top: 1em;
 }
-footer {
-    background-color: #373737;
-    color: white;
-    margin: 2em 0;
-}
-/*
-clearfix hack
-http://nicolasgallagher.com/micro-clearfix-hack/
-*/
-.clearFix:before, .clearFix:after {
-    content: " ";
-    display: table;
-}
-.clearFix:after {
-    clear: both;
-}
-/* enkel voor IE6/7 */
-.clearFix {
-    *zoom: 1;
-}
-
 

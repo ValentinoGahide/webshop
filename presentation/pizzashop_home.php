@@ -3,82 +3,151 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/pizza_shop.css" rel="stylesheet">
-
-        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <title>Valentino's PizzaShop</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/pizza_shop.css" >
+        <title>PizzaShop</title>
     </head>
-
     <body>
         <header>
-            <div class="container clearFix">
-                <h1><a href="ctrl_pizzashop_home.php" id="logo">Valentino's PizzaShop</a></h1>
-                    <?php
-                    if (isset($_COOKIE["aangemeld"])) {
-                        $login = "aangemeld met " . $_COOKIE["aangemeld"];
-                    } else {
-                        $login = "Gelieve aan te melden om een bestelling te doen";
-                    }
-                    ?>
-                    <br/>
-                    <p id="inlogok"> <?php print ($login); ?> </p>
-                <nav id="kopnav">
-                    <ul id="hoofdmenu">
-                        <li><a href="ctrl_pizzashop_home.php">Welkom</a></li>
-                        <li><a href="ctrl_aanmelding.php">Aanmelden</a></li>
-                        <li><a href="ctrl_pizzashop_bestel.php">Bestellen</a></li>
-                        <li><a href="ctrl_pizzashop_gastenboek.php">Gastenboek</a></li>
-                    </ul>
+            <div class="container">
+                <h1>PizzaShop</h1>
+            </div>
+            <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hoofdmenu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="ctrl_pizzashop_home.php"> <img src="images/textlogosmall.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="hoofdmenu">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="ctrl_pizzashop_home.php">Home</a></li>
+                            <li><a href="ctrl_pizzashop_bestel.php">Bestellen</a></li>
+                            <li><a href="ctrl_pizzashop_wiezijnwe.php">Wie zijn we</a></li>
+                            <li><a href="test.gastenboek.php">Gastenboek</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </header>
-        <div id="inhoud" class="container">
-            <section id="main"" >
-                <?php
-                foreach ((array) $bedrijfsinfo as $bd_info) {
-                    ?> 
-                    <div class="kolom">
-                        <ul id="alg_info" class="" >
-                            <li>
-                                <h4>Contactinformatie <br></h4>
-                                <p><?php print($bd_info->getNaam()); ?> </p> 
-                                <p><?php print($bd_info->getAdres()); ?> </p>
-                                <p><?php print($bd_info->getPostcode()->getGemeente()); ?> </p> <br/>
-                                <h4>Telefoon <br></h4>
-                                <p><?php print($bd_info->getTelefoon()); ?> </p>
-                                <p><?php print($bd_info->getGsm()); ?> </p> <br/>
-                                <h4>Email <br></h4>
-                                <p><?php print($bd_info->getEmail()); ?> </p> <br/>
-                                <h4>Openingsuren <br></h4>
-                                <p><?php print($bd_info->getOpeninguren()); ?> </p>
-                            </li>
-                            <li>
-                                <h4>Goed om te weten</h4>
-                                <p><?php print($bd_info->getAlg_info()); ?> </p> <br/>           
-                                <h4>Promotie</h4>
-                                <p><?php print($bd_info->getPromotie()); ?> </p> <br/>           
-                                <h4>Leveringsvoorwaarden</h4>
-                                <p><?php print($bd_info->getLev_vw()); ?> </p> <br/>           
-                            </li>
-                            <li> 
-                                <h4>Faq</h4>
-                                <p><?php print($bd_info->getFaq_info()); ?> </p>            
-                            </li>
-                        </ul>
+        <div class="container">
+            <div class="row">
+                <aside class="col-sm-4">
+                    <div class="form">
+                        <?php
+                        if (isset($_COOKIE["aangemeld"])) {
+                            $login = "aangemeld met " . $_COOKIE["aangemeld"];
+                        } else {
+                            $login = "Gelieve aan te melden om een bestelling te doen";
+                        }
+                        if ($error == "gebr_pasw_niet_ok") {
+                            $show_error = "Uw gebruikersnaam of uw paswoord klopt niet !";
+                        } elseif ($error == "gebr_actief_niet_ok") {
+                            $show_error = "U kan zich niet aanmelden, gelieve eerst uw openstaande saldo te betalen ";
+                        } else {
+                            $show_error = $error;
+                        }
+                        ?>      
+                        <p id="inlogok"> <?php print ($login); ?> </p>
+                        <p id="show_error"> <?php print ($show_error); ?> </p><br>
+                        <form role="form" method="post" action="ctrl_pizzashop_home.php?action=process">
+                            <div class="form-group">
+                                <label for="usernaam">Gebruikersnaam: </label>
+                                <input class="form-control" type="text" name="usernaam" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="wachtwoord">Wachtwoord: </label>
+                                <input class="form-control" type="password" name="wachtwoord" required>
+                            </div>
+                            <input class="btn btn-default" type="submit" value="Aanmelden">
+                        </form><br>         
+                        <form role="form" method="post" action="ctrl_voeg_gebr_toe.php" id ="button_nieuwe_gebr"> 
+                            <p> Bent u een nieuwe gebruiker ?  </p>
+                            <input class="btn btn-default" type="submit" value="Registreren">
+                        </form>
                     </div>
-                    <?php
-                }
-                ?> 
-            </section>
-            <!--einde inhoud--> 
+                    <div id="contact_kort" class="col-sm-6">
+                        <address>
+                            <strong>Valentino's</strong><br>
+                            Ingooigemstraat 14<br>
+                            8553 Otegem<br>
+                            Telefoon: 056/77 24 74<br>
+                            Gsm:</abbr> 0479/45 42 13<br>
+                            <a href="mailto:#">valentinogahide@gmail.com</a>
+                        </address>
+                    </div>
+                    <div id="bedrijfslogo" class="col-sm-6">
+                        <img id="logo" src="images/logo.gif">
+                    </div>
+                </aside>
+                <section>
+                    <div id="carousel" class="container col-sm-8">
+                        <!--  Carousel - consult the Twitter Bootstrap docs at 
+      http://twitter.github.com/bootstrap/javascript.html#carousel -->
+                        <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+                            <div class="carousel-inner">
+                                <div class="item active"><!-- class of active since it's the first item -->
+                                    <img src="images/pizza1.jpg" alt="" />
+                                    <div class="carousel-caption">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza2.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza3.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza4.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza5.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza6.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza7.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza8.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza9.jpg" alt="" />
+                                </div>
+                                <div class="item">
+                                    <img src="images/pizza10.jpg" alt="" />
+                                </div>
+                            </div><!-- /.carousel-inner -->
+                            <!--  Next and Previous controls below
+                                  href values must reference the id for this carousel -->
+                            <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+                        </div><!-- /.carousel -->
+                    </div>
+                    <div id="uitleg" class="container col-sm-8">
+                        <strong>Klik snel op <a href="ctrl_pizzashop_bestel.php">Bestellen</a> en geniet van onze heerlijke pizza's!</strong>
+                    </div>
+                </section>
+            </div>
         </div>
-        <footer>
-            <div class="container clearFix"> Copyright Valentino Gahide </div>
+        <footer class="navbar-fixed-bottom">
+            <div class="container"> 
+                PHP eindtest &copy; Valentino Gahide 
+            </div>
         </footer>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.carousel').carousel({
+                    interval: 4000
+                });
+            });
+        </script>
     </body>
 </html>
