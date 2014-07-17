@@ -1,56 +1,63 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/normalize.css" rel="stylesheet">
-<link href="css/pizza_shop.css" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="css/pizza_shop.css" >
+        <title>PizzaShop</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>PizzaShop</h1>
+            </div>
+            <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hoofdmenu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="ctrl_pizzashop_home.php"> <img src="images/textlogosmall.png"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="hoofdmenu">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="ctrl_pizzashop_home.php">Home</a></li>
+                            <li><a href="ctrl_pizzashop_bestel.php">Bestellen</a></li>
+                            <li><a href="ctrl_pizzashop_wiezijnwe.php">Wie zijn we</a></li>
+                            <li><a href="test.gastenboek.php">Gastenboek</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <h2>Berichten</h2>
+        <?php
+        $berichten = $gb->getAlleBerichten();
+        ?>
+        <ul>
+            <?php
+            foreach ($berichten as $bericht) {
+                ?>
+                <strong>Auteur:</strong> <?php print($bericht->getAuteur()); ?>
+                <br><em>
+                    <?php print($bericht->getBoodschap()); ?>
+                </em></p>
+            <hr>
+            <?php
+        }
+        ?>
+    </ul>
 
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<title>Pizzashop take me away 24 op 24, 7 op 7 voor u</title>
-</head>
-
-<body class="home">
-<header>
-  <div class="container">
-    <h1><a href="ctrl_pizzashop_home.php" id="logo">Pizzashop Take me Away</a></h1>
-    <?php 
-       if (isset ($_COOKIE["aangemeld"] ))
-       {
-           $login = "aangemeld met ".$_COOKIE["aangemeld"];  
-       }
-       else
-       {
-           $login = "";  
-       }
-    ?>      
-    <br/>
-    <nav id="kopnav">
-      <ul id="hoofdmenu">
-        <li><a href="ctrl_pizzashop_home.php">Welkom</a></li>
-        <li><a href="ctrl_pizzashop_bestel.php">Bestellen</a></li>
-        <li><a href="ctrl_aanmelding.php">Aanmelden</a></li>
-        <li><a href="ctrl_pizzashop_gastenboek.php">Gastenboek</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div id="inhoud" class="container">
-  <section id="main">
-      <form method="post" action="ctrl_pizzashop_home.php"> 
-         <p> Gastenboek is nog niet aanwezig, nog even geduld </p> 
-         <input type="submit" value="Terug">
-      </form>        
-      <br>
-  </section>
-  <!--einde inhoud--> 
-</div>
-<footer>
-  <div class="container"> Copyright Valentino Gahide </div>
-</footer>
+    <h2>Bericht toevoegen</h2>
+    <form method="post" action="test.gastenboek.php?action=create">
+        <p><strong>Auteur:</strong> <input type="text" name="auteur"></p>
+        <p><strong>Boodschap:</strong><br>
+            <textarea name="boodschap" cols="50" rows="4" placeholder="boodschap van maximaal 200 tekens"></textarea></p>
+        <input type="submit" value="Verzenden">
+    </form>
 </body>
 </html>

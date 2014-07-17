@@ -1,4 +1,5 @@
-SQL AANMAAK TABELLEN
+SQL 
+AANMAAK/
 
 -gebruiker
 
@@ -108,3 +109,21 @@ extra_kost_lev INT,
 gebr VARCHAR(30)
 )
 
+INVOEREN/
+
+-invoeren postcodes
+
+INSERT INTO postcode (postnr, gemeente, kostprijs, thuis_lev_ok)
+VALUES
+(8500, "Kortrijk", 1, true),
+(8510, "Bellegem", 1, true),
+(8510, "Kooigem", 1, true),
+(8510, "Marke", 1, true),
+(8510, "Rollegem", 1, true),
+(8540, "Deerlijk", 1, true),
+(8550, "Zwevegem", 0, true),
+(8551, "Heestert", 0, true),
+(8552, "Moen", 0, true),
+(8553, "Otegem", 0, true),
+(8554, "Sint-Denijs", 0, true),
+(8580, "Avelgem", 1, true)

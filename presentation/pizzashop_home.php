@@ -73,10 +73,9 @@
                     <div id="contact_kort" class="col-sm-6">
                         <address>
                             <strong>Valentino's</strong><br>
-                            Ingooigemstraat 14<br>
-                            8553 Otegem<br>
-                            Telefoon: 056/77 24 74<br>
-                            Gsm:</abbr> 0479/45 42 13<br>
+                            Avelgemstraat 17<br>
+                            8550 Zwevegem<br>
+                            Gsm: 0479/45 42 13<br>
                             <a href="mailto:#">valentinogahide@gmail.com</a>
                         </address>
                     </div>

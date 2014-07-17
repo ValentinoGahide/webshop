@@ -18,7 +18,7 @@ if (isset($_GET["action"])) {
             $error = "gebr_exists";
             // get all postcodes in array to show dropdown list in user registration form
             $postcodes = PostcodeService::getPostcodes_in_array();
-            include("presentation/nieuw_gebr_form.php");
+            include("presentation/pizzashop_nieuw_gebr_form.php");
             exit(0);
         }
         // we kunnen doorgaan en gebruiker aanmaken
@@ -41,5 +41,5 @@ if (isset($_GET["action"])) {
     // get all postcodes in array to show dropdown list in user registration form
     //
     $postcodes = PostcodeService::getPostcodes_in_array();
-    include("presentation/nieuw_gebr_form.php");
+    include("presentation/pizzashop_nieuw_gebr_form.php");
 } 

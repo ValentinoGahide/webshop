@@ -21,6 +21,9 @@ a:hover{
 .navbar-brand {                 /* textlogo mooi plaatsen */
     padding-top: 10px; 
 }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: red;
+}
 .row {
     margin: 2em -1em;
 }

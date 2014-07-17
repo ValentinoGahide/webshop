@@ -89,51 +89,52 @@
                                             $selected = " selected = 'selected'";
                                         else
                                             $selected = "";
-                                        print ("<option value=" . $pc['id'] . $selected . '>' . $pc['gemeente'] . " (" . $pc['postnr'] . ")" . '</option>');
+                                        echo ("<option value=" . $pc['id'] . $selected . '>' . $pc['gemeente'] . " (" . $pc['postnr'] . ")" . '</option>');
                                     }
                                     ?>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-md-3 control-label">Email:</label>
-                            <div class="col-md-9">
-                                <input class="form-control" type="email" name="email" required>
+                        <div class = "form-group">
+                            <label for = "email" class = "col-md-3 control-label">Email:</label>
+                            <div class = "col-md-9">
+                                <input class = "form-control" type = "email" name = "email" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="telefoon" class="col-md-3 control-label">Telefoon:</label>
-                            <div class="col-md-9">
-                                <input class="form-control" type="text" name="telefoon" required>
+                        <div class = "form-group">
+                            <label for = "telefoon" class = "col-md-3 control-label">Telefoon:</label>
+                            <div class = "col-md-9">
+                                <input class = "form-control" type = "text" name = "telefoon" required>
                             </div>
                         </div>
-                            <div class="form-group">
-                            <label for="btwnr" class="col-md-3 control-label">Btwnummer:</label>
-                            <div class="col-md-9">
-                                <input class="form-control" type="text" name="btwnr" required>
+                        <div class = "form-group">
+                            <label for = "btwnr" class = "col-md-3 control-label">Btwnummer:</label>
+                            <div class = "col-md-9">
+                                <input class = "form-control" type = "text" name = "btwnr" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="opm_extra" class="col-md-3 control-label">Opmerkingen:</label>
-                            <div class="col-md-9">
-                                <textarea class="form-control" rows="3" name="opm_extra" required></textarea>
+                        <div class = "form-group">
+                            <label for = "opm_extra" class = "col-md-3 control-label">Opmerkingen:</label>
+                            <div class = "col-md-9">
+                                <textarea class = "form-control" rows = "3" name = "opm_extra" required></textarea>
                             </div>
                         </div>
-                        <input id="registerbtn" class="btn btn-default" type="submit" value="Registreren">
-                        <input id="registerbtn" class="btn btn-default" type="reset" value="Reset">
+                        <input id = "registerbtn" class = "btn btn-default" type = "submit" value = "Registreren">
+                        <input id = "registerbtn" class = "btn btn-default" type = "reset" value = "Reset">
                     </form>
                 </section>
-                <div class="thuisbezorging col-sm-6"> 
+                <div class = "thuisbezorging col-sm-5">
                 </div>
-                <!--einde inhoud--> 
+                <!--einde inhoud-->
             </div>
         </div>
-        <footer class="navbar-fixed-bottom">
-            <div class="container"> 
-                PHP eindtest &copy; Valentino Gahide 
+        <footer class = "navbar-fixed-bottom">
+            <div class = "container">
+                PHP eindtest &copy;
+                Valentino Gahide
             </div>
         </footer>
-        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src = "http://code.jquery.com/jquery.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
     </body>
 </html>
