@@ -10,6 +10,9 @@
 CSS voor Pizzashop
 */
 /*algemeen*/
+body {
+    overflow: hidden;
+}
 header, footer {
     background: black;
     color: white;
